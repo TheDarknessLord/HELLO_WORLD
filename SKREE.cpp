@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <stdlib.h>
 
 
 using namespace std;
@@ -17,24 +17,27 @@ class fib
  void fib::FIBO(int y)
  {    
       z=x+y;
-      cout<<z;
+      cout<<z<<endl;
       x=y;
       y=z;
       if(c==10)
-      cout<<"END";
-      else
-      FIBO(y);
-      c=c+1;
+      {
+	  cout<<"END";
+      exit(0);
+	  }
+	  else
+     { c=c+1;
+	   FIBO(y);
+      
+	  }
  }
        
      
 int main()
 { 
     fib obj;
-    cout<<"HEloo";
+    cout<<"HEloo"<<endl;
     obj.init();
     obj.FIBO(1);
     return 0;
 } 
-
- 
